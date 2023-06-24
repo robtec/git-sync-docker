@@ -4,14 +4,12 @@ services:
   gitsync:
     image: robtec/git-sync:4
     container_name: gitsync
-    command:
-      - |
-        --repo=https://github.com/kubernetes/git-sync \
-        --root=/tmp/git/root \
-        --period=30s
-
+    environment:
+      GITSYNC_REPO: https://github.com/kubernetes/git-sync
+      GITSYNC_PERIOD: 30s
+      GITSYNC_ROOT: /tmp/git/root
     volumes:
       - sync-dir:/tmp/git/root
 
 volumes:
-  sync-db:
+  sync-dir:
