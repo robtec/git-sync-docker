@@ -1,24 +1,12 @@
-# X Docker
+# Git-Sync Docker
 
-Docker container for X
-
-## Setup
-
-
-Build the image
-```
-docker build -t x-image .
-```
+Docker Compose for K8s git-sync
 
 ## Running
 ```
 # docker compose (preferred)
 
-docker compose up -d --build
-
-# docker
-
-docker run ...
+docker compose up -d
 ```
 
 ## Docs
